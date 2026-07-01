@@ -1,0 +1,8 @@
+# Copy to .dev.vars for local `wrangler dev` (git-ignored).
+# In production these live in the Cloudflare dashboard.
+POSTMARK_TOKEN="your-postmark-server-api-token"
+FROM_EMAIL="contact@finx.dev"
+TO_EMAIL="you@example.com"
+ALLOWED_ORIGINS="http://localhost:3000,https://finx.dev"
+MESSAGE_STREAM="outbound"
+SUBJECT_PREFIX="[finx.dev] "

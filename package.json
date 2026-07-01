@@ -1,0 +1,16 @@
+{
+  "name": "email-postmark-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reusable Cloudflare Worker that receives a contact form POST and sends an email via Postmark.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^3.78.0"
+  }
+}

@@ -143,7 +143,8 @@ export default {
     if (!pmResp.ok) {
       const detail = await pmResp.text().catch(() => "");
       console.error("Postmark error", pmResp.status, detail);
-      return json({ ok: false, error: "Failed to send" }, 502, cors);
+      // TEMPORARY DEBUG: surface Postmark's error to diagnose. Revert after.
+      return json({ ok: false, error: "Failed to send", debug: detail, status: pmResp.status }, 502, cors);
     }
 
     return json({ ok: true }, 200, cors);
